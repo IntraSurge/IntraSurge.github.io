@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tim J.M. Jaspers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="academicons-1.9.4/css/academicons.css">
+    <link rel="icon" href="logos/computer_vision.jpg">
+
+    <style>
+        .logo_header {
+            margin-top: 2em;
+            margin-left: 2em;
+        }
+
+        .publication {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .publication:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .publication .image {
+            margin-bottom: 0.5rem;
+            margin-right: 0.5rem;
+            /*border: 2px solid #ccc;*/
+            padding: 0.25rem;
+        }
+
+        .publication .image img {
+            width: 350px;
+        }
+
+        .publication .image_media img {
+            width: 188px;
+            height: 250px;
+        }
+
+        .publication .title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication .authors {
+            margin-bottom: 0.5rem;
+        }
+
+        .publication .links {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .publication .links a {
+            margin-right: 1rem;
+        }
+
+        @media screen and (min-width: 768px) {
+            .publication {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
+        .experience {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .experience:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .experience .title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience ul {
+            margin-left: 2em;
+        }
+
+        .venue {
+            /*margin: 1rem;*/
+            font-weight: bold;
+        }
+
+        .logo {
+            /*width: 125px;*/
+            height: 25px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logo_prize {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .logo_prize img {
+            height: 25px;
+            width: 25px;
+            /*padding-top: 5px;*/
+            /*padding-bottom: -5px;*/
+            vertical-align: middle;
+        }
+
+        .logo_colab img {
+            height: 50px;
+            margin-left: 3em;
+            margin-right: 3em;
+            margin-top: 1em;
+        }
+
+        .logo:hover {
+            transform: scale(1.025);
+        }
+
+        .float-left-child {
+            float: left;
+            margin: 1rem;
+        }
+
+        .image {
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            z-index: 1; /* Add z-index to make the navigation bar always on top */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #3B3B3B;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        main {
+            margin-top: 50px; /* Add margin to the top of the main content to prevent it from being covered by the navigation bar */
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#Pubs">Publications</a></li>
+        <li><a href="#Exp">Experiences</a></li>
+    </ul>
+</nav>
+
+<section class="hero is-info">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column">
+                    <h1 class="title">
+                        Tim J.M. Jaspers
+                    </h1>
+                    <h2 class="subtitle">
+                        PhD Candidate Medical Computer Vision & AI - Eindhoven University of Technology
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="logo_header">
+    <div class="container">
+        <div class="columns is-vcentered">
+            <div class="logo_colab">
+                <img src="logos/tue.png">
+            </div>
+            <div class="logo_colab">
+                <img src="logos/vca.png">
+            </div>
+            <div class="logo_colab">
+                <img src="logos/amsterdamumc.png">
+            </div>
+<!--            <div class="logo_colab">-->
+<!--                <img src="logos/hri.png">-->
+<!--            </div>-->
+            <!-- Add more logos as needed -->
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-one-third">
+                <figure class="image">
+                    <img src="TimJaspers.jpg">
+                </figure>
+                <h3 class="title is-3">Biography</h3>
+                <p>Tim Jaspers is currently pursuing a PhD with the Video Coding and Architectures Research Group, where their research focuses on addressing the blind spots of
+                    artificial intelligence (AI) and computer vision applications in endoscopy. This research aims to enhance the precision and reliability of these technologies in medical settings,
+                    ensuring safer and more effective outcomes.
+                <p STYLE="margin:10px 0px 10px 0px">Contact: <a href="mailto:t.j.m.jaspers@tue.nl">t.j.m.jaspers@tue.nl</a>.</p>
+                <div class="parent">
+                    <div class="child float-left-child">
+                        <a href="https://scholar.google.com/citations?user=nwfiV2wAAAAJ&hl=en" target="_blank">
+                            <img src="logos/scholar.png" alt="Scholar" class="logo">
+                        </a>
+                    </div>
+                    <div class="child float-left-child">
+                        <a href="https://orcid.org/0009-0001-8306-5058" target="_blank">
+                            <img src="logos/orcid.png" alt="Orcid" class="logo">
+                        </a>
+                    </div>
+                    <div class="child float-left-child">
+                        <a href="https://www.linkedin.com/in/tim-jaspers-900034170/" target="_blank">
+                            <img src="logos/linkedin.png" alt="LinkedIn" class="logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <h3 class="title is-3" id="Pubs">Highlighted Publications</h3>
+                <section class="publication">
+                    <div class="column is-one-third">
+                        <div class="image_media">
+                            <img src="publications/media.jpg">
+                        </div>
+                    </div>
+                    <div class="details">
+<!--                        <a href="index.html" target="_blank">-->
+                            <h4 class="title is-4">Robustness evaluation of deep neural networks for endoscopic image analysis: Insights and strategies</h4>
+                            <p class="authors"><u>Tim J.M. Jaspers</u>, Tim G.W. Boers, Carolus H.J. Kusters, Martijn R. Jong, Jelmer B. Jukema,
+                                Albert J. de Groof, Jacques J. Bergman,  Peter H.N. de With and Fons van der Sommen</p>
+                            <p class="venue">Medical Image Analysis - Volume 94, January 2024</p>
+                            <div class="links">
+                                <p><a
+                                        href="https://doi.org/10.1016/j.media.2024.103157" target="_blank">Elsevier ScienceDirect</a></p>
+                                <p><span class="icon"><i class="fab fa-github"></i></span><a
+                                        href="https://github.com/BONS-AI-VCA-AMC/Robustness" target="_blank">Github</a></p>
+                            </div>
+<!--                        </a>-->
+                    </div>
+                </section>
+
+                <section class="publication">
+                    <div class="column is-one-third">
+                        <div class="image_media">
+                            <img src="publications/InvestigativeRadiology.jpg">
+                        </div>
+                    </div>
+                    <div class="details">
+<!--                        <a href="index.html" target="_blank">-->
+                            <h4 class="title is-4">Deep Learning Synthesis of White-Blood From Dark-Blood Late Gadolinium Enhancement Cardiac Magnetic Resonance</h4>
+                            <p class="authors"><u>Tim J.M. Jaspers</u>, Bibi Martens, Richard Crawley, Lamis Jada, Sina Amirrajab, Marcel Breeuwer, Robert J. Holtackers, Amedeo Chiribiri, and Cian M. Scannell</p>
+                            <p class="venue">Investigative Radiology - Volume XX, 2024</p>
+                            <div class="links">
+                                <p><a
+                                        href="https://doi.org/10.1097/RLI.0000000000001086" target="_blank">Wolters Kluwer</a></p>
+                            </div>
+<!--                        </a>-->
+                    </div>
+                </section>
+
+                <section class="publication">
+                    <div class="column is-one-third">
+                        <div class="image_media">
+                            <img src="publications/media.jpg">
+                        </div>
+                    </div>
+                    <div class="details">
+<!--                        <a href="index.html" target="_blank">-->
+                            <h4 class="title is-4">Will Transformers change gastrointestinal endoscopic image analysis? A comparative analysis
+                            between CNNs and Transformers, in terms of performance, robustness and generalization</h4>
+                            <p class="authors">Carolus H.J. Kusters, <u>Tim J.M. Jaspers</u>, Tim G.W. Boers, Martijn R. Jong, Jelmer B. Jukema, Kiki N. Fockens,
+                                Albert J. de Groof, Jacques J. Bergman, Fons van der Sommen and Peter H.N. de With</p>
+                            <p class="venue">Medical Image Analysis - Volume 99, January 2025</p>
+                            <div class="links">
+                                <p><a
+                                        href="https://doi.org/10.1016/j.media.2024.103348" target="_blank">Elsevier ScienceDirect</a></p>
+                                <p><span class="icon"><i class="fab fa-github"></i></span><a
+                                        href="https://github.com/chjkusters/Endoscopy-CNNs-vs-Transformers" target="_blank">Github</a></p>
+                            </div>
+<!--                        </a>-->
+                    </div>
+                </section>
+
+                <section class="publication">
+                    <div class="column is-one-third">
+                        <div class="image_media">
+                            <img src="publications/media.jpg">
+                        </div>
+                    </div>
+                    <div class="details">
+<!--                        <a href="index.html" target="_blank">-->
+                            <h4 class="title is-4">Foundation models in gastrointestinal endoscopic AI: Impact of architecture, pre-training approach and data efficiency</h4>
+                            <p class="authors">Tim G.W. Boers, Kiki N. Fockens, Joost A. van der Putten, <u>Tim J.M. Jaspers</u>, Carolus H.J. Kusters, Jelmer B. Jukema, Martijn R. Jong,
+                                Maarten R. Struyvenberg, Albert J. de Groof, Jacques J. Bergman, Peter H.N. de With and Fons van der Sommen </p>
+                            <p class="venue">Medical Image Analysis - Volume 99, January 2025</p>
+                            <div class="links">
+                                <p></span><a
+                                        href="https://doi.org/10.1016/j.media.2024.103298" target="_blank">Elsevier ScienceDirect</a></p>
+                            </div>
+<!--                        </a>-->
+                    </div>
+                </section>
+
+                <section class="publication">
+                    <div class="column is-one-third">
+                        <div class="image_media">
+                            <img src="publications/SurgicalEndoscopy.png">
+                        </div>
+                    </div>
+                    <div class="details">
+<!--                        <a href="index.html" target="_blank">-->
+                            <h4 class="title is-4">Deep learning-based recognition of key anatomical structures during robot-assisted minimally invasive esophagectomy</h4>
+                            <p class="authors">Robin Den Boer, <u>Tim J.M. Jaspers</u>, Cas De Jongh, Josien P.W. Pluim, Fons van der Sommen, Tim G.W. Boers, Richard van Hillegersberg,
+                               Maureen A.J.M. Van Eijnatten and Jelle P. Ruurda P. Ruurda  </p>
+                            <p class="venue">Surgical Endoscopy - Volume 37 - Issue 7, July 2023</p>
+                            <div class="links">
+                                <p></span><a
+                                        href="https://doi.org/10.1007/s00464-023-09990-z" target="_blank">Springer</a></p>
+                            </div>
+<!--                        </a>-->
+                    </div>
+                </section>
+
+                <h3 class="title is-3">Recent Publications</h3>
+
+                <section class="publication">
+                    <div class="column is-one-third">
+                        <div class="image">
+                            <img src="publications/miccai_2024.png">
+                        </div>
+                    </div>
+                    <div class="details">
+<!--                        <a href="index.html" target="_blank">-->
+                            <h4 class="title is-4">Exploring the Effect of Dataset Diversity in Self-Supervised Learning for Surgical Computer Vision</h4>
+                            <p class="authors"><u>Tim J.M. Jaspers</u>, Ronald L.P.D. de Jong, Yasmina Al Khalil, Tijn Zeelenberg, Carolus H.J. Kusters, Yiping Li,
+                                Romy C. van Jaarsveld, Franciscus H.A. Bakker, Jelle P. Ruurda, Willem M. Brinkmann, Peter H.N. de With and Fons van der Sommen</p>
+                            <p class="venue">Data Engineering in Medical Imaging (DEMI) Workshop (2rd Edition) - Satellite Event MICCAI 2024</p>
+                            <div class="links">
+<!--                                <p><span class="icon"><i class="ai ai-archive"></i></span><a-->
+<!--                                        href="..." target="_blank">Springer Proceedings</a></p>-->
+                                <p><span class="icon"><i class="fab fa-github"></i></span><a
+                                        href="https://github.com/TimJaspers0801/SurgeNet" target="_blank">Github</a></p>
+                            </div>
+<!--                        </a>-->
+                    </div>
+                </section>
+
+                <section class="publication">
+                    <div class="column is-one-third">
+                        <div class="image">
+                            <img src="publications/ISBI2024.jpg">
+                        </div>
+                    </div>
+                    <div class="details">
+<!--                        <a href="index.html" target="_blank">-->
+                            <h4 class="title is-4">Automated Surgical Urethral Length Estimation for Robot-Assisted Radical Prostatectomy</h4>
+                            <p class="authors">Joris de Nijs, <u>Tim J.M. Jaspers</u>, Franciscus H.A. Bakker, Willem M. Brinkmann, Peter H.N. de With and Fons van der Sommen</p>
+                            <p class="venue">IEEE International Symposium on Biomedical Imaging (ISBI 2024)</p>
+                            <div class="links">
+<!--                                <p><span class="icon"><i class="ai ai-archive"></i></span><a-->
+<!--                                        href="..." target="_blank">Springer Proceedings</a></p>-->
+                                <p></i></span><a
+                                        href="https://doi.org/10.1109/ISBI56570.2024.10635376" target="_blank">IEEE Xplore</a></p>
+                            </div>
+<!--                        </a>-->
+                    </div>
+                </section>
+
+                <section class="publication">
+                    <div class="column is-one-third">
+                        <div class="image">
+                            <img src="publications/miccai_2023.png">
+                        </div>
+                    </div>
+                    <div class="details">
+<!--                        <a href="index.html" target="_blank">-->
+                            <h4 class="title is-4">Investigating the Impact of Image Quality on Endoscopic AI Model Performance</h4>
+                            <p class="authors"><u>Tim J.M. Jaspers</u>, Tim G.W. Boers, Carolus H.J. Kusters, Martijn R. Jong, Jelmer B. Jukema,
+                                Albert J. de Groof, Jacques J. Bergman,  Peter H.N. de With and Fons van der Sommen</p>
+                            <p class="venue">Applications of Medical AI (AMAI) Workshop (2rd Edition) - Satellite Event MICCAI 2023</p>
+                            <div class="links">
+<!--                                <p><span class="icon"><i class="ai ai-archive"></i></span><a-->
+<!--                                        href="..." target="_blank">Springer Proceedings</a></p>-->
+                                <p></i></span><a
+                                        href="https://link.springer.com/chapter/10.1007/978-3-031-47076-9_4" target="_blank">Springer</a></p>
+                                <p><span class="icon"><i class="fab fa-github"></i></span><a
+                                        href="https://github.com/BONS-AI-VCA-AMC/Robustness" target="_blank">Github</a></p>
+                            </div>
+<!--                        </a>-->
+                    </div>
+                </section>
+
+                <h3 class="title is-3" id="Exp">Experiences</h3>
+                <section class="experience">
+                    <h4 class="title is-4">PhD Candidate - Video Coding & Architectures <br><i>Eindhoven University of Technology</i></h4>
+                    <ul style="list-style-type:circle">
+                        <li><strong>Project title:</strong> Mind the gap in endoscopic AI: Towards robust and reliable AI applications in daily endoscopic practice.</li>
+                            <ul style="list-style-type:square">
+                            <li><strong>Description:</strong> Focus on identifying blind spots of Artificial Intelligence (AI) in endoscopy.</li>
+                            <li><strong>Supervision:</strong> prof.dr.ir. Peter de With (Full professor at TU/e, IEEE Life Fellow) and dr.ir. Fons van der Sommen (Associate professor at TU/e)</li>
+                            </ul>
+                        <li><strong>Teaching Assistant:</strong> Neural Networks for Computer Vision (M.Sc Course)</li>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="experience">
+                    <h4 class="title is-4">M.Sc Medical Engineering - Medical Image Analysis <br><i>Eindhoven
+                        University of Technology</i></h4>
+                    <ul style="list-style-type:circle">
+                        <li><strong>Specialization:</strong> medical image acquisition, machine learning, deep learning and computer vision</li>
+                        <li><strong>Thesis title:</strong> Deep learning-based anatomy recognition for robot-assisted minimally invasive esophagectomy</li>
+                            <ul style="list-style-type:square">
+                            <li><strong>Description:</strong> Developing a novel deeplearning network for anatomy recognition during robot-assisted minially invasive esophagectomy.</li>
+                            </ul>
+                        <li><strong>Journal Publication:</strong> <a href="https://doi.org/10.1007/s00464-023-09990-z" target="_blank">Surgical Endoscopy</a> </li>
+                        <li><strong>Journal Publication:</strong> <a href="https://doi.org/10.1007/s00464-022-09421-5" target="_blank">Surgical Endoscopy</a> </li>
+                        </li>
+                    </ul>
+                </section>
+                <section class="experience">
+                    <h4 class="title is-4">M.Sc Internship<br><i>King's College London </i></h4>
+                    <ul style="list-style-type:circle">
+                        <li><strong>Project title:</strong> Deep Learning Synthesis of White-Blood From Dark-Blood Late Gadolinium Enhancement Cardiac Magnetic Resonance</li>
+                            <ul style="list-style-type:square">
+                            <li><strong>Description:</strong> Synthesizing Dark-Blood LGE scans from White-Blood LGE scans using a Generative Adversarial deep learning Network. </li>
+                            <li><strong>Grade:</strong> 9.0/10</li>
+                            </ul>
+                        <li><strong>Journal Publication:</strong> <a href="https://doi.org/10.1097/RLI.0000000000001086" target="_blank">Investigative Radiology</a> </li>
+                    </ul>
+                </section>
+                <section class="experience">
+                    <h4 class="title is-4">B.Sc Biomedical Engineering <br><i>Eindhoven
+                        University of Technology</i></h4>
+                    <ul style="list-style-type:circle">
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- EMPTY PUBLICATION ENTRY: -->
+<!--<section class="publication">-->
+<!--  <div class="image">-->
+<!--    <img src="publications/image.png">-->
+<!--  </div>-->
+<!--  <div class="details">-->
+<!--    <h4 class="title is-4">Title</h4>-->
+<!--    <p class="authors">Authors</p>-->
+<!--    <p class="venue">Venue</p>-->
+<!--    <div class="links">-->
+<!--      <p><span class="icon"><i class="ai ai-arxiv"></i></span><a href="arxiv" target="_blank">arXiv</a></p>-->
+<!--      <p><span class="icon"><i class="fab fa-github"></i></span><a href="github" target="_blank">Github</a></p>-->
+<!--      <p><span class="icon"><i class="ai ai-ieee"></i></span><a href="ieee" target="_blank">IEEE proceedings</a></p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+</body>
+</html>
